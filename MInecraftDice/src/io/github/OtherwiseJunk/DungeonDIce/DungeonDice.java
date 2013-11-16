@@ -21,10 +21,11 @@ public final class DungeonDice extends JavaPlugin {
     
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
 
-    	if(cmd.getName().equalsIgnoreCase("DDRoll")){ // If the player typed /basic then do the following...
+    	if(cmd.getName().equalsIgnoreCase("DDRoll")){ // If the player typed /DDROll then do the following...
     		
-    		Dice dice = new Dice(Integer.parseInt(args[1]));
-    		getServer().broadcastMessage(sender + "rolled" +args[0]+ "d" + args[1] + "and got a " + dice.Roll(Integer.parseInt(args[0])));
+    		Dice dice = new Dice(Integer.parseInt(args[1])); //Create a new dice with the specified number of sides
+    		getServer().broadcastMessage(sender.getName() + " rolled " +args[0]+ "d" + args[1] + " and got a " + dice.Roll(Integer.parseInt(args[0]))); 
+    		//Roll the new dice a specified number of times and broadcast the total to the server
     		
     		return true;
 
