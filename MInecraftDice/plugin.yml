@@ -1,0 +1,9 @@
+name: Dungeon Dice
+main: io.github.OtherwiseJunk.DungeonDIce.DungeonDice
+version: 0.1
+commands:
+  DDRoll:
+    description: Roll a specified number of dice with a specified number of sides
+    usage: /<command> [Number Of Dice] [Number of sides on the dice]
+    permission: <plugin name>.DDRoll
+    permission-message: You don't have <permission> to roll the die.
